@@ -1,0 +1,24 @@
+.social-media {
+    .outer-circle {
+        display: flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: linear-gradient(290deg,#28E1A5, #0069D2);
+    }
+    .inner-circle {
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        text-align: center;
+        padding: 5px 8px;
+    }
+}

@@ -1,0 +1,8 @@
+<nav [ngClass]="{'sticky-top': isHeroSectionVisible}">
+  <app-nav></app-nav>
+</nav>
+<app-hero class="hero-section-scroll-tracker"></app-hero>
+<app-media-slider></app-media-slider>
+<app-desktop-library></app-desktop-library>
+<app-equipment class="equipment-section-scroll-tracker" [isEquipmentSectionVisible]="isEquipmentSectionVisible"></app-equipment>
+<app-footer></app-footer>

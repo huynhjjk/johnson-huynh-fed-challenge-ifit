@@ -1,0 +1,14 @@
+<section id="media-slider" class="py-5 bg-light horizontal-scroll-wrapper">
+    <div class="text-center mb-0">
+        <button class="slide-button slide-button-left ml-4 text-light btn rounded-circle" type="button" (click)="slideLeft()">
+            <img src="assets/images/icons/icn-chevron-left.png" alt="Icon Chevron Left">
+        </button>
+        <div class="slide text-wrap m-4 p-5 text-dark bg-white rounded border d-inline-block" *ngFor="let mediaSliderItem of mediaSliderItems">
+            <img class="mb-3" [src]="mediaSliderItem.imageUrl" alt="{{mediaSliderItem?.company}} Logo">
+            <p>"{{mediaSliderItem.quote}}"</p>
+        </div>
+        <button class="slide-button slide-button-right mr-4 text-light btn rounded-circle" type="button" (click)="slideRight()">
+            <img src="assets/images/icons/icn-chevron-right.png" alt="Icon Chevron Right">
+        </button>
+    </div>
+</section>

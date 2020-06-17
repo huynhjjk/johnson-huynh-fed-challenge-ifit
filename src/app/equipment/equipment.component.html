@@ -1,0 +1,14 @@
+<section id="equipment" class="container-fluid my-5 text-center">
+    <h4 class="text-muted mb-5">Interested in our exciting iFit-enabled equipment?</h4>
+    <div class="d-flex flex-wrap justify-content-center align-items-center" [ngClass]="{'animate-fade-in': isEquipmentSectionVisible}">
+        <a [href]="equipmentItem.url" class="px-5 py-3 mb-3 mr-3 border rounded" *ngFor="let equipmentItem of equipmentItems; let index = index"
+            [ngClass]="{'animate-box-shadow': isSelected(index)}" (mouseenter)="activeIndex = index" (mouseleave)="activeIndex = undefined">
+            <figure>
+                <div class="equipment-item mb-2">
+                    <img [src]="equipmentItem.imageUrl" alt="Image of {{equipmentItem.category}}">
+                </div>
+                <figcaption class="text-muted font-weight-bold">{{equipmentItem.category}}</figcaption>
+            </figure>
+        </a>
+    </div>
+</section>

@@ -1,0 +1,39 @@
+<footer class="text-light bg-dark py-4">
+    <section class="container">
+        <div class="row">
+            <div class="col-xs-12 col" *ngFor="let footerCategory of footerCategories">
+                <h6 class="font-weight-bold mb-3">{{footerCategory.category}}</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-3" *ngFor="let page of footerCategory.pages"><a class="text-light" [href]="page.url">{{page.title}}</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <hr class="border-secondary"/>
+    <section class="social-media container border-muted d-flex flex-wrap justify-content-center py-4">
+        <a class="outer-circle mr-5" [href]="footerSocialMedia.url" *ngFor="let footerSocialMedia of footerSocialMedias">
+            <div class="inner-circle bg-dark">
+                <img [src]="footerSocialMedia.imageUrl" alt="Icon of {{footerSocialMedia.title}}">
+            </div>
+        </a>
+    </section>
+    <hr class="border-secondary"/>
+    <section class="container d-flex flex-wrap align-items-center py-4">
+        <div class="mr-auto my-2 cursor-pointer">
+            English
+            <img src="assets/images/icons/icn-chevron-down.png" alt="iFit Coach Logo">
+        </div>
+        <div class="d-flex flex-wrap py-2">
+            <span class="my-2 mr-4">
+                © iFit.com. All Rights Reserved.
+            </span>
+            <a class="text-light my-2 mr-4" href="#/privacy-policy">
+                Privacy Policy
+            </a>
+            <a class="text-light my-2" href="#/terms-of-use">
+                Terms of Use
+            </a>
+        </div>
+        <div class="ml-auto"></div>
+    </section>
+</footer>

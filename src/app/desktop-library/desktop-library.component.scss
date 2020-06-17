@@ -1,0 +1,39 @@
+@media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1250px;
+    }
+    .card {
+        width: 20rem;
+    }
+}
+
+.card {
+    width: 18rem;
+}
+
+.caption {
+    min-height: 5em;
+}
+
+.view-details {
+    min-height: 2em;
+}
+
+figure {
+    position: relative;
+}
+
+figure .workouts-series-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    display: none;
+    color: #FFF;
+}
+
+figure .workouts-series-overlay {
+    display: block;
+    background: rgba(0, 12, 40, .54);
+}

@@ -1,0 +1,40 @@
+<section id="desktop-library" class="container my-5 d-flex flex-wrap justify-content-center align-items-center">
+    <div class="text-dark text-decoration-none card box-shadow mb-4 mr-3" *ngFor="let desktopLibraryItem of desktopLibraryItems; let index = index;"
+        [ngClass]="{'animate-box-shadow': isSelected(index)}" (mouseenter)="activeIndex = index" (mouseleave)="activeIndex = undefined">
+        <figure>
+            <a [href]="desktopLibraryItem.url"><img class="card-img-top" [src]="desktopLibraryItem.imageUrl" alt="Image of {{desktopLibraryItem.title}}"></a>
+            <a href="#/workouts-series/{{desktopLibraryItem.workoutsSeries}}" *ngIf="desktopLibraryItem.workoutsSeries" class="workouts-series-overlay py-5 text-center text-uppercase text-white small">
+                <h5 class="font-weight-bold">{{desktopLibraryItem?.workoutsSeries}}</h5>
+                <p class="mb-2">Workouts</p>
+                <img src="/assets/images/icons/icn_playlist.svg" alt="Icon of Playlist">
+            </a>
+        </figure>
+        <div class="card-body pt-3 pb-0">
+            <div class="caption">
+                <div class="media">
+                    <a [href]="desktopLibraryItem.url" class="media-body text-dark">
+                        <h6 class="font-weight-bold">{{desktopLibraryItem.title}}</h6>
+                    </a>
+                    <a href="#/trainer"><img class="ml-3" [src]="desktopLibraryItem.thumbnailUrl" alt="Thumbnail of {{desktopLibraryItem.title}}"></a>
+                </div>
+                <div class="d-flex mb-2 small">
+                    <div *ngIf="desktopLibraryItem?.stats?.metricTime" class="mr-2">
+                        <img src="/assets/images/icons/icn_timer_linemdpi.png" alt="Icon of Metric Time">
+                        <span class="ml-2 text-decoration-none">{{desktopLibraryItem?.stats?.metricTime}}</span>
+                    </div>
+                    <div *ngIf="desktopLibraryItem?.stats?.metricDistance" class="mr-2">
+                        <img src="/assets/images/icons/icn_distance_line.png" alt="Icon of Metric Distance">
+                        <span class="ml-2">{{desktopLibraryItem?.stats?.metricDistance}}</span>
+                    </div>
+                    <div *ngIf="desktopLibraryItem?.stats?.metricCalorieBurn" class="mr-2">
+                        <img src="/assets/images/icons/icn_calorie_burn_line.png" alt="Icon of Metric Calorie Burn">
+                        <span class="ml-2">{{desktopLibraryItem?.stats?.metricCalorieBurn}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="view-details">
+                <a *ngIf="isSelected(index)" [href]="desktopLibraryItem.url" class="custom-text-primary text-primary text-uppercase font-weight-bold">View Details</a>
+            </div>
+        </div>
+    </div>
+</section>

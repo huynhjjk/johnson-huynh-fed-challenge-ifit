@@ -1,0 +1,9 @@
+<nav id="main-nav" class="d-flex flex-wrap justify-content-center align-items-center text-uppercase border-bottom px-5 py-3 bg-light">
+    <a class="navbar-brand mr-auto pr-5" href="#/">
+        <img src="assets/svg-logos/ifit-coach-logo.svg" alt="iFit Coach Logo">
+    </a>
+    <div class="my-2 d-flex flex-wrap">
+        <a class="py-2 pr-5 text-dark" [href]="mainNavItem.url" *ngFor="let mainNavItem of mainNavItems">{{mainNavItem.title}}</a>
+    </div>
+    <a href="#/register" role="button" class="custom-btn-primary btn btn-primary ml-auto text-uppercase">Sign Up</a>
+</nav>
